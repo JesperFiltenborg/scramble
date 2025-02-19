@@ -38,6 +38,18 @@ class Operation
     public function __construct(string $method)
     {
         $this->method = $method;
+        $this->addParameters([
+            Parameter::make('id', 'header')
+                ->required(true)
+                ->setName('Content-Type')
+                ->example('application/json')
+                ->setSchema(Schema::fromType(new StringType())),
+            Parameter::make('id', 'header')
+                ->required(true)
+                ->setName('Accept')
+                ->example('application/json')
+                ->setSchema(Schema::fromType(new StringType())),
+        ]);
     }
 
     public static function make(string $method)
