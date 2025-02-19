@@ -1,8 +1,8 @@
 <?php
 
-use Dedoc\Scramble\Support\Generator\Types\StringType;
-
 namespace Dedoc\Scramble\Support\Generator;
+
+use Dedoc\Scramble\Support\Generator\Types\StringType;
 
 class Operation
 {
